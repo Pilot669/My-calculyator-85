@@ -1,5 +1,4 @@
 package com.company;
-import java.util.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -45,7 +44,7 @@ public class Main {
         return operaciay;
     }
 
-    public static int chislo() throws IOException {
+    public static int chislo(Object args) throws IOException {
         InputStreamReader b2 = new InputStreamReader(System.in);
         BufferedReader a2 = new BufferedReader(b2);
         int y1 = 0;
@@ -67,10 +66,10 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         System.out.println("Введите первое число:");
-        int y1 = chislo();
+            y1 = chislo(args);
         int operaciay = operaciay();
         System.out.println("Введите второе число");
-        int y2 = chislo();
+        int y2 = chislo(args);
 
         switch (operaciay) {
             case 1: {
